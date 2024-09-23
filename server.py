@@ -57,3 +57,5 @@ def purchasePlaces():
 @app.route('/logout')
 def logout():
     return redirect(url_for('index'))
+if __name__ == "__name__":
+    app.run()
