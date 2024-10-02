@@ -1,5 +1,5 @@
 import json
-from flask import Flask,render_template,request,redirect,flash,url_for
+from flask import Flask, render_template, request, redirect, flash, url_for
 
 
 def loadClubs():
@@ -81,5 +81,5 @@ def purchasePlaces():
 @app.route('/logout')
 def logout():
     return redirect(url_for('index'))
-if __name__ == "__name__":
-    app.run()
+if __name__ == "__main__":
+    app.run(debug=True)
