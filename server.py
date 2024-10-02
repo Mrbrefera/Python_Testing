@@ -12,6 +12,9 @@ def loadCompetitions():
     with open('competitions.json') as comps:
          listOfCompetitions = json.load(comps)['competitions']
          return listOfCompetitions
+    
+competitions = loadCompetitions()
+clubs = loadClubs()
 
 
 app = Flask(__name__)
@@ -49,6 +52,8 @@ def book(competition,club):
     else:
         flash("Something went wrong-please try again")
         return render_template('welcome.html', club=club, competitions=competitions)
+    
+
 
 
 @app.route('/purchasePlaces', methods=['POST'])
